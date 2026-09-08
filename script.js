@@ -39,7 +39,7 @@
     current = (i + railItems.length) % railItems.length;
     railItems.forEach(function(el, idx){ el.setAttribute('aria-current', idx === current ? 'true' : 'false'); });
     var d = railItems[current].dataset;
-    spotMedia.innerHTML = '<div class="tex ' + d.tex + '"></div><span class="cat-tag">' + d.cat + '</span>';
+    spotMedia.innerHTML = '<img src="' + d.img + '" alt="' + d.title + '" loading="eager"><span class="cat-tag">' + d.cat + '</span>';
     spotCatTag.textContent = d.cat;
     spotCat.textContent = d.cat;
     spotTitle.textContent = d.title;
@@ -107,7 +107,8 @@
 
   function openLightbox(item){
     lastFocused = document.activeElement;
-    lbMedia.className = 'lb-media tex ' + item.querySelector('.tex').className.split(' ')[1];
+    var img = item.querySelector('img');
+    lbMedia.innerHTML = img ? '<img src="' + img.getAttribute('src') + '" alt="' + (item.getAttribute('data-title') || 'Projet') + '" loading="eager">' : '';
     lbCat.textContent = item.getAttribute('data-cat-label');
     lbTitle.textContent = item.getAttribute('data-title');
     lbDesc.textContent = item.getAttribute('data-desc');
@@ -178,6 +179,20 @@
       if(firstError) firstError.focus();
     }
   });
+
+  var compareSlider = document.querySelector('.compare-slider');
+  var compareRange = document.querySelector('.compare-slider input[type="range"]');
+  var compareAfter = document.querySelector('.compare-after');
+  var compareHandle = document.querySelector('.compare-handle');
+  if(compareSlider && compareRange && compareAfter && compareHandle){
+    function syncCompare(value){
+      var percent = Math.min(Math.max(value, 0), 100);
+      compareAfter.style.width = percent + '%';
+      compareHandle.style.left = percent + '%';
+    }
+    compareRange.addEventListener('input', function(e){ syncCompare(e.target.value); });
+    syncCompare(50);
+  }
 
   // ---- Footer year ----
   document.getElementById('copyYear').textContent = '© ' + new Date().getFullYear() + ' Couronne Urban. Tous droits réservés.';

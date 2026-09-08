@@ -79,18 +79,9 @@
 <section class="hero" id="hero">
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-art" aria-hidden="true">
-    <!-- IMAGE SLOT: peut être remplacée par une photo de projet du dossier ZIP (ex. hero-menuiserie.jpg) -->
-    <svg viewBox="0 0 500 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="60" y="60" width="380" height="680" stroke="#C6A165" stroke-opacity="0.5" stroke-width="1"/>
-      <line x1="60" y1="260" x2="440" y2="260" stroke="#C6A165" stroke-opacity="0.35"/>
-      <line x1="60" y1="460" x2="440" y2="460" stroke="#C6A165" stroke-opacity="0.35"/>
-      <line x1="250" y1="60" x2="250" y2="740" stroke="#C6A165" stroke-opacity="0.35"/>
-      <rect x="100" y="100" width="120" height="140" stroke="#C6A165" stroke-opacity="0.6"/>
-      <rect x="280" y="300" width="140" height="120" stroke="#C6A165" stroke-opacity="0.6"/>
-      <rect x="100" y="500" width="120" height="200" stroke="#C6A165" stroke-opacity="0.6"/>
-      <circle cx="250" cy="260" r="3" fill="#C6A165"/>
-      <circle cx="250" cy="460" r="3" fill="#C6A165"/>
-    </svg>
+    <div class="hero-photo">
+      <img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.42.jpeg" alt="Cuisine contemporaine en bois clair et pierre noire" loading="eager">
+    </div>
   </div>
   <div class="container hero-inner">
     <span class="eyebrow">Menuiserie · Décoration · Aménagement sur mesure</span>
@@ -146,39 +137,39 @@
       <!-- Rail d'aperçus : cliquer sur une vignette met à jour la grande image -->
       <nav class="rail" id="rail" aria-label="Choisir une réalisation à afficher">
         <button class="rail-item" aria-current="true"
-          data-tex="tex-bois" data-cat="Menuiserie" data-title="Dressing sur mesure — Bourgogne"
+          data-img="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.40.jpeg" data-cat="Menuiserie" data-title="Dressing sur mesure — Bourgogne"
           data-desc="Structure en chêne massif, finition huilée, agencement pensé pour un dressing traversant."
           data-materials="Matériaux : chêne massif, quincaillerie laiton brossé">
-          <div class="rail-thumb"><div class="tex tex-bois"></div></div>
+          <div class="rail-thumb"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.40.jpeg" alt="Dressing sur mesure en bois" loading="lazy"></div>
           <div><span class="rail-cat">Menuiserie</span><span class="rail-title">Dressing — Bourgogne</span></div>
         </button>
         <button class="rail-item" aria-current="false"
-          data-tex="tex-beige" data-cat="Décoration" data-title="Salon panoramique — CIL"
-          data-desc="Palette beige et terracotta, matières naturelles et lumière rasante valorisées."
-          data-materials="Matériaux : lin, laiton brossé, bois clair">
-          <div class="rail-thumb"><div class="tex tex-beige"></div></div>
-          <div><span class="rail-cat">Décoration</span><span class="rail-title">Salon panoramique — CIL</span></div>
+          data-img="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.42 (1).jpeg" data-cat="Décoration" data-title="Cuisine contemporaine — Anfa"
+          data-desc="Palette sobre et matériaux nobles réaffirmés dans une cuisine lumineuse et fonctionnelle."
+          data-materials="Matériaux : bois clair, pierre, acier inox">
+          <div class="rail-thumb"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.42 (1).jpeg" alt="Cuisine contemporaine" loading="lazy"></div>
+          <div><span class="rail-cat">Décoration</span><span class="rail-title">Cuisine — Anfa</span></div>
         </button>
         <button class="rail-item" aria-current="false"
-          data-tex="tex-beton" data-cat="Aménagement" data-title="Espace de vie ouvert — Ain Diab"
+          data-img="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85" data-cat="Aménagement" data-title="Espace de vie ouvert — Ain Diab"
           data-desc="Reconfiguration d'un plateau brut en séjour et cuisine articulés autour d'un îlot central."
           data-materials="Matériaux : béton ciré, Corian, chêne">
-          <div class="rail-thumb"><div class="tex tex-beton"></div></div>
+          <div class="rail-thumb"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85" alt="Cuisine en aménagement contemporain" loading="lazy"></div>
           <div><span class="rail-cat">Aménagement</span><span class="rail-title">Espace de vie ouvert</span></div>
         </button>
         <button class="rail-item" aria-current="false"
-          data-tex="tex-noir" data-cat="Agencement" data-title="Agencement de bureau — Sidi Maârouf"
-          data-desc="Cloisons vitrées, mobilier intégré et rangements sur mesure pour un cabinet de conseil."
-          data-materials="Matériaux : verre, acier noir mat, placage bois">
-          <div class="rail-thumb"><div class="tex tex-noir"></div></div>
-          <div><span class="rail-cat">Agencement</span><span class="rail-title">Bureau — Sidi Maârouf</span></div>
+          data-img="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85" data-cat="Agencement" data-title="Détail sculpté — Atelier"
+          data-desc="Bois travaillé à la main, motif ornemental et finition naturelle mise en valeur."
+          data-materials="Matériaux : bois massif, finition naturelle">
+          <div class="rail-thumb"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85" alt="Détail sculpté en bois" loading="lazy"></div>
+          <div><span class="rail-cat">Agencement</span><span class="rail-title">Détail sculpté</span></div>
         </button>
         <button class="rail-item" aria-current="false"
-          data-tex="tex-mob" data-cat="Mobilier" data-title="Console et bibliothèque — Californie"
+          data-img="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.44.jpeg" data-cat="Mobilier" data-title="Mobilier intégré — Californie"
           data-desc="Pièces uniques conçues pour épouser les volumes irréguliers d'un appartement ancien."
           data-materials="Matériaux : noyer massif, laiton">
-          <div class="rail-thumb"><div class="tex tex-mob"></div></div>
-          <div><span class="rail-cat">Mobilier</span><span class="rail-title">Console &amp; bibliothèque</span></div>
+          <div class="rail-thumb"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.44.jpeg" alt="Mobilier intégré en bois" loading="lazy"></div>
+          <div><span class="rail-cat">Mobilier</span><span class="rail-title">Mobilier intégré</span></div>
         </button>
       </nav>
     </div>
@@ -189,9 +180,8 @@
 <section class="about" id="a-propos">
   <div class="container about-grid">
     <div class="about-media">
-      <!-- IMAGE SLOT: atelier / équipe / matériaux — dossier ZIP -->
-      <div class="tex tex-beton m1" role="img" aria-label="Vue d'atelier de menuiserie"></div>
-      <div class="tex tex-terre m2" role="img" aria-label="Détail d'un assemblage en bois"></div>
+      <img class="m1" src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.38.jpeg" alt="Atelier de menuiserie et cuisine sur mesure" loading="lazy" style="position:absolute;top:0;left:0;width:78%;height:70%;object-fit:cover;">
+      <img class="m2" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85" alt="Détail sculpté de bois" loading="lazy" style="position:absolute;bottom:0;right:0;width:52%;height:44%;object-fit:cover;border:6px solid #F4F0E6;box-shadow:0 30px 60px -35px rgba(21,19,15,0.45);">
     </div>
     <div class="about-text">
       <span class="eyebrow">L'entreprise</span>
@@ -218,42 +208,54 @@
   </div>
   <div class="svc-grid">
     <div class="svc large">
-      <div><span class="num">01</span>
+      <div>
+        <div class="svc-photo"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.38 (1).jpeg" alt="Cuisine sur mesure avec bois clair" loading="lazy"></div>
+        <span class="num">01</span>
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
         <h3>Menuiserie sur mesure</h3>
         <p>Placards, dressings, portes et agencements fabriqués à la dimension exacte de chaque espace, en atelier.</p>
       </div>
     </div>
     <div class="svc">
-      <div><span class="num">02</span>
+      <div>
+        <div class="svc-photo"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.42.jpeg" alt="Décoration intérieure contemporaine" loading="lazy"></div>
+        <span class="num">02</span>
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20l4-9 4 6 3-4 5 7"/><circle cx="9" cy="6" r="2"/></svg>
         <h3>Décoration intérieure</h3>
         <p>Choix de teintes, de textures et de mobilier pour donner à chaque pièce une identité cohérente.</p>
       </div>
     </div>
     <div class="svc">
-      <div><span class="num">03</span>
+      <div>
+        <div class="svc-photo"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.41 (1).jpeg" alt="Aménagement d'un espace de vie" loading="lazy"></div>
+        <span class="num">03</span>
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
         <h3>Aménagement d'espaces</h3>
         <p>Optimisation des volumes et des circulations pour des pièces à vivre plus fonctionnelles.</p>
       </div>
     </div>
     <div class="svc large wide-alt">
-      <div><span class="num">04</span>
+      <div>
+        <div class="svc-photo"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85" alt="Agencement de bureau et mobilier sur mesure" loading="lazy"></div>
+        <span class="num">04</span>
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="7" width="18" height="11" rx="1"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
         <h3>Agencement professionnel</h3>
         <p>Cloisonnement, mobilier intégré et signalétique pour bureaux, commerces et espaces d'accueil.</p>
       </div>
     </div>
     <div class="svc">
-      <div><span class="num">05</span>
+      <div>
+        <div class="svc-photo"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.39.jpeg" alt="Rénovation et transformation d'intérieur" loading="lazy"></div>
+        <span class="num">05</span>
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 4l16 16M20 4L4 20"/></svg>
         <h3>Rénovation et transformation</h3>
         <p>Reprise de l'existant — cloisons, sols, menuiseries — pour redonner un usage actuel aux lieux.</p>
       </div>
     </div>
     <div class="svc">
-      <div><span class="num">06</span>
+      <div>
+        <div class="svc-photo"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85" alt="Mobilier personnalisé" loading="lazy"></div>
+        <span class="num">06</span>
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="9" width="14" height="8" rx="1"/><line x1="8" y1="17" x2="8" y2="20"/><line x1="16" y1="17" x2="16" y2="20"/></svg>
         <h3>Mobilier personnalisé</h3>
         <p>Pièces uniques dessinées pour épouser un volume précis ou répondre à un usage particulier.</p>
@@ -284,56 +286,56 @@
         data-title="Dressing sur mesure — Bourgogne" data-cat-label="Menuiserie"
         data-desc="Dressing traversant en chêne massif, portes coulissantes et éclairage intégré."
         data-materials="Chêne massif, quincaillerie laiton brossé">
-        <div class="tex tex-bois" role="img" aria-label="Dressing en bois massif"></div>
+        <img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.40.jpeg" alt="Dressing sur mesure en chêne" loading="lazy">
         <div class="g-info"><span class="cat">Menuiserie</span><h4>Dressing — Bourgogne</h4></div>
       </div>
       <div class="g-item s-wide" data-cat="decoration" tabindex="0" role="button"
-        data-title="Salon panoramique — CIL" data-cat-label="Décoration"
-        data-desc="Palette chaude, tapis en fibres naturelles et suspension en laiton brossé."
-        data-materials="Lin, laiton brossé, bois clair">
-        <div class="tex tex-beige" role="img" aria-label="Salon décoré en tons chauds"></div>
-        <div class="g-info"><span class="cat">Décoration</span><h4>Salon panoramique — CIL</h4></div>
+        data-title="Cuisine contemporaine — Anfa" data-cat-label="Décoration"
+        data-desc="Palette chaude, matériaux nobles et jeux de texture dans une cuisine lumineuse."
+        data-materials="Bois clair, pierre, acier inox">
+        <img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.42.jpeg" alt="Cuisine contemporaine" loading="lazy">
+        <div class="g-info"><span class="cat">Décoration</span><h4>Cuisine contemporaine — Anfa</h4></div>
       </div>
       <div class="g-item" data-cat="amenagement" tabindex="0" role="button"
         data-title="Cuisine ouverte — Ain Diab" data-cat-label="Aménagement"
         data-desc="Îlot central en Corian et rangements dissimulés jusqu'au plafond."
         data-materials="Corian, béton ciré, chêne">
-        <div class="tex tex-beton" role="img" aria-label="Cuisine ouverte aménagée"></div>
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85" alt="Cuisine ouverte aménagée" loading="lazy">
         <div class="g-info"><span class="cat">Aménagement</span><h4>Cuisine ouverte</h4></div>
       </div>
       <div class="g-item" data-cat="mobilier" tabindex="0" role="button"
-        data-title="Console et bibliothèque — Californie" data-cat-label="Mobilier"
+        data-title="Mobilier intégré — California" data-cat-label="Mobilier"
         data-desc="Pièces uniques dessinées pour épouser les volumes irréguliers d'un appartement ancien."
         data-materials="Noyer massif, laiton">
-        <div class="tex tex-mob" role="img" aria-label="Bibliothèque en bois sur mesure"></div>
-        <div class="g-info"><span class="cat">Mobilier</span><h4>Console &amp; bibliothèque</h4></div>
+        <img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.44.jpeg" alt="Mobilier intégré en bois" loading="lazy">
+        <div class="g-info"><span class="cat">Mobilier</span><h4>Mobilier intégré</h4></div>
       </div>
       <div class="g-item s-wide" data-cat="sur-mesure" tabindex="0" role="button"
-        data-title="Suite parentale — Racine" data-cat-label="Réalisation sur mesure"
-        data-desc="Tête de lit capitonnée, verrière intérieure et dressing intégré, conçus ensemble."
-        data-materials="Bois teinté, verre, velours">
-        <div class="tex tex-terre" role="img" aria-label="Suite parentale aménagée sur mesure"></div>
-        <div class="g-info"><span class="cat">Réalisation sur mesure</span><h4>Suite parentale — Racine</h4></div>
+        data-title="Détail sculpté — Atelier" data-cat-label="Réalisation sur mesure"
+        data-desc="Bois travaillé à la main, motif ornemental et finition naturelle mise en valeur."
+        data-materials="Bois massif, finition naturelle">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85" alt="Détail sculpté de bois" loading="lazy">
+        <div class="g-info"><span class="cat">Réalisation sur mesure</span><h4>Détail sculpté — Atelier</h4></div>
       </div>
       <div class="g-item" data-cat="menuiserie" tabindex="0" role="button"
         data-title="Porte pivot en bois — Gauthier" data-cat-label="Menuiserie"
         data-desc="Porte d'entrée massive sur pivot central, ferronnerie noire mate."
         data-materials="Bois massif, ferronnerie noire mate">
-        <div class="tex tex-noir" role="img" aria-label="Porte pivot en bois massif"></div>
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85" alt="Porte pivot en bois massif" loading="lazy">
         <div class="g-info"><span class="cat">Menuiserie</span><h4>Porte pivot — Gauthier</h4></div>
       </div>
       <div class="g-item s-tall" data-cat="amenagement" tabindex="0" role="button"
         data-title="Bureau paysager — Sidi Maârouf" data-cat-label="Aménagement"
         data-desc="Cloisons vitrées et postes modulables pour une équipe de douze personnes."
         data-materials="Verre, acier noir mat, placage bois">
-        <div class="tex tex-beton" role="img" aria-label="Bureau paysager aménagé"></div>
+        <img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.39 (1).jpeg" alt="Bureau paysager aménagé" loading="lazy">
         <div class="g-info"><span class="cat">Aménagement</span><h4>Bureau paysager</h4></div>
       </div>
       <div class="g-item" data-cat="decoration" tabindex="0" role="button"
         data-title="Chambre d'amis — Anfa" data-cat-label="Décoration"
         data-desc="Tons neutres et textiles bruts pour une pièce calme et lumineuse."
         data-materials="Lin brut, bois clair, laine">
-        <div class="tex tex-beige" role="img" aria-label="Chambre décorée en tons neutres"></div>
+        <img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.38 (2).jpeg" alt="Chambre décorée en tons neutres" loading="lazy">
         <div class="g-info"><span class="cat">Décoration</span><h4>Chambre d'amis — Anfa</h4></div>
       </div>
     </div>
@@ -386,6 +388,38 @@
         <div></div><div class="t-marker"></div>
         <div class="t-content"><span class="eyebrow">Étape 6</span><h3>Installation et finitions</h3><p>Pose sur site, réglages et contrôle qualité avant réception définitive du projet.</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="compare-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Avant / Après</span>
+      <h2>Le caractère d'un espace transformé en détail</h2>
+    </div>
+    <div class="compare-slider" aria-label="Comparaison avant et après">
+      <div class="compare-layer compare-before"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.39.jpeg" alt="Avant transformation de la cuisine" loading="lazy"></div>
+      <div class="compare-layer compare-after"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.42.jpeg" alt="Après transformation de la cuisine" loading="lazy"></div>
+      <div class="compare-handle"><span aria-hidden="true"></span></div>
+      <input type="range" min="0" max="100" value="50" aria-label="Glisser pour comparer avant/après">
+    </div>
+  </div>
+</section>
+
+<section class="details-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Détails</span>
+      <h2>Des finitions pensées jusqu’au moindre détail</h2>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-card tall"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85" alt="Menuiserie sculptée en bois" loading="lazy"><div class="caption">Bois sculpté</div></div>
+      <div class="detail-card"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.41 (3).jpeg" alt="Luminaires et détails architecturaux" loading="lazy"><div class="caption">Luminaires</div></div>
+      <div class="detail-card"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.40 (4).jpeg" alt="Détail de finition et de texture" loading="lazy"><div class="caption">Textures</div></div>
+      <div class="detail-card"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.42 (4).jpeg" alt="Détail de cuisine sur mesure" loading="lazy"><div class="caption">Cuisine</div></div>
+      <div class="detail-card"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85" alt="Détail de meubles sur mesure" loading="lazy"><div class="caption">Mobilier</div></div>
+      <div class="detail-card tall"><img src="images/couronneimage/WhatsApp Image 2026-09-06 at 03.28.38 (1).jpeg" alt="Détail d'aménagement intérieur" loading="lazy"><div class="caption">Aménagement</div></div>
     </div>
   </div>
 </section>
