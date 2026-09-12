@@ -70,6 +70,8 @@
     font-size:0.9rem; color: rgba(244,240,230,0.85); position:relative; padding:4px 0;
     transition:color var(--dur) var(--ease);
   }
+  .nav-emoji{ display:inline-block; margin-right:7px; color:var(--or-clair); font-size:0.78em; transform:translateY(-1px); transition:transform var(--dur) var(--ease), color var(--dur) var(--ease); }
+  .nav-links a:hover .nav-emoji{ transform:translateY(-1px) rotate(12deg) scale(1.15); color:var(--or); }
   header.nav.scrolled .nav-links a{ color: rgba(21,19,15,0.75); }
   .nav-links a::after{
     content:""; position:absolute; left:0; right:100%; bottom:0; height:1px; background:var(--or);
@@ -103,6 +105,7 @@
   }
   .menu-open .mobile-panel{ transform: translateY(0); }
   .mobile-panel a{ font-family:var(--serif); font-size:2.1rem; padding:14px 0; border-bottom:1px solid var(--ligne); }
+  .mobile-panel .nav-emoji{ font-size:0.62em; margin-right:12px; }
   .mobile-panel .btn{ margin-top:28px; width:fit-content; }
 
   /* ---------- HERO ---------- */
