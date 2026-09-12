@@ -81,6 +81,27 @@
   spotlightEl.addEventListener('mouseenter', function(){ clearInterval(timer); clearInterval(progressTimer); });
   spotlightEl.addEventListener('mouseleave', function(){ resetTimer(); });
 
+  // ---- Services: ouverture d'une catégorie à la fois ----
+  var serviceButtons = document.querySelectorAll('.svc-explore');
+  serviceButtons.forEach(function(button){
+    button.addEventListener('click', function(){
+      var card = button.closest('.svc');
+      var detail = document.getElementById(button.getAttribute('aria-controls'));
+      var isOpen = button.getAttribute('aria-expanded') === 'true';
+      serviceButtons.forEach(function(otherButton){
+        var otherDetail = document.getElementById(otherButton.getAttribute('aria-controls'));
+        otherButton.setAttribute('aria-expanded', 'false');
+        otherDetail.hidden = true;
+        otherButton.closest('.svc').classList.remove('is-open');
+      });
+      if(!isOpen){
+        button.setAttribute('aria-expanded', 'true');
+        detail.hidden = false;
+        card.classList.add('is-open');
+      }
+    });
+  });
+
   // ---- Gallery filters ----
   var filterBtns = document.querySelectorAll('#filters button');
   var items = document.querySelectorAll('.g-item');
@@ -157,6 +178,7 @@
     var fields = form.querySelectorAll('.field');
     fields.forEach(function(field){
       var input = field.querySelector('input, select, textarea');
+      if(!input) return;
       var ok = true;
       if(input.type === 'file'){ ok = true; }
       else if(input.type === 'checkbox'){ ok = input.checked; }
@@ -166,13 +188,32 @@
       if(!ok) valid = false;
     });
     if(valid){
+      var photo = document.getElementById('f-photo');
+      var photoNote = photo.files && photo.files[0] ? '\nPhoto à joindre dans WhatsApp : ' + photo.files[0].name : '';
+      var whatsappMessage = [
+        'Bonjour Couronne Urban,',
+        '',
+        'Je souhaite demander un devis pour mon projet.',
+        '',
+        'Nom : ' + document.getElementById('f-nom').value.trim(),
+        'Prénom : ' + document.getElementById('f-prenom').value.trim(),
+        'E-mail : ' + document.getElementById('f-email').value.trim(),
+        'Téléphone : ' + document.getElementById('f-tel').value.trim(),
+        'Type de projet : ' + document.getElementById('f-type').value,
+        'Message : ' + document.getElementById('f-message').value.trim(),
+        photoNote,
+        '',
+        'Merci de me recontacter.'
+      ].join('\n');
+      var whatsappUrl = 'https://wa.me/212661778452?text=' + encodeURIComponent(whatsappMessage);
+      var whatsappWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      if(!whatsappWindow){ window.location.href = whatsappUrl; }
+      success.textContent = 'Votre demande est prête dans WhatsApp. Vérifiez le message puis envoyez-le.';
       success.classList.add('show');
       form.reset();
       if(fileHint){ fileHint.textContent = 'JPG ou PNG, 10 Mo maximum.'; fileHint.classList.remove('file-chosen'); }
       success.setAttribute('tabindex','-1');
       success.focus();
-      // NOTE : ce formulaire est prêt côté front-end. Pour un envoi réel,
-      // relier ce submit handler à un service d'e-mail (ex. formspree, backend interne, etc.)
     } else {
       success.classList.remove('show');
       var firstError = form.querySelector('.field.error input, .field.error select, .field.error textarea');
