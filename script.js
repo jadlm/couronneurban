@@ -191,7 +191,7 @@
       var photo = document.getElementById('f-photo');
       var photoNote = photo.files && photo.files[0] ? '\nPhoto à joindre dans WhatsApp : ' + photo.files[0].name : '';
       var whatsappMessage = [
-        'Bonjour Couronne Urban,',
+        'Bonjour CouronneUrban,',
         '',
         'Je souhaite demander un devis pour mon projet.',
         '',
@@ -236,5 +236,5 @@
   }
 
   // ---- Footer year ----
-  document.getElementById('copyYear').textContent = '© ' + new Date().getFullYear() + ' Couronne Urban. Tous droits réservés.';
+  document.getElementById('copyYear').textContent = '© ' + new Date().getFullYear() + ' CouronneUrban. Tous droits réservés.';
 })();
